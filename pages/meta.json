@@ -5,6 +5,7 @@
     "hidden": true
   },
   "docs": {
-    "title": "Docs"
+    "title": "Docs",
+    "type": "page"
   }
 }
