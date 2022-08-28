@@ -6,7 +6,7 @@ export default {
     return "Question? Let us know →";
   },
   footerText: () => {
-    return "Powered by Solana Pay and Candy Machine";
+    return "We bring everything needed from APIs, SDKs and a set of tools to instantly create and launch NFTs that are aimed to bring in a new wave of users.";
   },
   feedbackLabels: "feedback",
   nextLinks: true,
@@ -24,7 +24,7 @@ export default {
           CandyPay 🍭
         </span>
         <span className="text-gray-600 font-normal hidden md:inline">
-          smol description
+          Your gateway to Solana NFTs
         </span>
       </>
     );
