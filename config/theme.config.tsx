@@ -6,7 +6,7 @@ export default {
     return "Question? Let us know →";
   },
   footerText: () => {
-    return "We bring everything needed from APIs, SDKs and a set of tools to instantly create and launch NFTs that are aimed to bring in a new wave of users.";
+    return "Bringing seamless mobile-native UX to Solana's NFT ecosystem! 🍭";
   },
   feedbackLabels: "feedback",
   nextLinks: true,
