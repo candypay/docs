@@ -1,5 +1,5 @@
 {
   "introduction": "Introduction",
-  "generate-qr-code": "Generate mint code",
-  "get-qr-code-metadata": "Fetch metadata"
+  "generate-mint-code": "Generate mint code",
+  "fetch-metadata": "Fetch metadata"
 }

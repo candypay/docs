@@ -2,8 +2,8 @@
   "introduction": "Introduction",
   "terminology": "Terminology",
   "how-it-works": "How it works",
-  "nft": {
-    "title": "APIs"
+  "api": {
+    "title": "Public APIs"
   },
   "payments": {
     "title": "Payments"
