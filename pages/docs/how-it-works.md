@@ -7,7 +7,7 @@ CandyPay provides a seamless user experience by bundling necessary instructions 
 ## Step by step overview: How CandyPay actually works
 
 1. The users opens a Solana Pay compatible wallet and scans the generated CandyPay QR code.
-2. The wallet would extracts the transaction request URL from the QR code. The extracted would look like this `solana:https://api.candypay.fun/api/v1/mint?id=<qr-code-id>`
+2. The wallet would extract the transaction request URL from the QR code.
 3. The wallet would initially send a `GET` request to our backend to fetch the metadata related to the QR code - URL of the icon, name of the NFT collection.
 4. After the wallet has successfully fetched the metadata, it would send a `POST` request along with the user's public key in request payload. Our backend would return base64 encoded transaction with the required instructions in it.
 5. The wallet would decode the base64 encoded transaction and simulate the transaction on the Solana blockchain and identify the fees associated with the transaction.
