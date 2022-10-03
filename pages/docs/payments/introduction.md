@@ -1,3 +1,3 @@
-# Reimagining Commerce on Solana, dropping shortly 
+# Reimagining eCommerce on Solana, dropping shortly 
 
-*you are ready anon? join our [Discord](https://discord.gg/VGjPXWUHGT) for earliest updates 🍭* 
+*Are you ready anon? Join our [Discord](https://discord.gg/VGjPXWUHGT) for earliest updates 🍭* 

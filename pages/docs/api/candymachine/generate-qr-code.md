@@ -1,4 +1,4 @@
-# Generate CandyMachine minting code
+# Generate Candy Machine minting code
 
 Generate a 'headless-minting' QR codes and Tap to Mint links for your NFT collection via its Candy Machine v2 ID. The end-user would **need to pay the gas and minting fees**
 
@@ -16,7 +16,7 @@ Generate a 'headless-minting' QR codes and Tap to Mint links for your NFT collec
 | `network`            | string | Network on which the Candy Machine is deployed | `mainnet`                       |
 | `label`              | string | Name of the NFT collection                     | `CandyPay`                      |
 
-Don't have `candy_machine_id` yet? Follow this guide to create one- [Create a CandyMachine ID](https://docs.candypay.fun/docs/guides/how-to-create-a-candy-machine)
+Don't have `candy_machine_id` yet? Follow this guide to create one- [Create a Candy Machine](https://docs.candypay.fun/docs/guides/how-to-create-a-candy-machine)
 
 ## Response
 
@@ -35,7 +35,7 @@ On successful POST request, the API would return an response object containing t
 
 On successful creation of `solana_url`, you can create QR Codes and Tap to Mint links to power NFT mitning in a seamless way directly from any social platform 
 
-- **QR Code**: Use any qr code utility npm package or online editors like [QR Code Monkey](https://www.qrcode-monkey.com/) to create and design minting QR Codes passing `solana_url`
+- **QR Code**: Use this [createQR function](https://docs.solanapay.com/api/core/function/createQR) from `@solana/pay` SDK or online editors like [QR Code Monkey](https://www.qrcode-monkey.com/) to create and design minting QR Codes passing `solana_url`
 - **Mint Links**: Pass this created `solana_url` in `href` of any button or anchor tag to power Tap to Mint flow for your users
 
 ## Examples

@@ -75,11 +75,11 @@ headers_list = {
 }
 
 payload = json.dumps({
-    {
+   {
     "id":"Q5ZRUp_RcZlbKOw3BXO6S",
     "amount":0.4,
     "address":"5T1ssgMSLm6ZowCmASkefDrPqSsg2RRVU3BvZoiyj1uc"
-}
+  }
 })
 
 response = requests.request("POST", req_url, data=payload,  headers=headers_list)

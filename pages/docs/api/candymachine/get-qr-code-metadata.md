@@ -1,4 +1,4 @@
-# Get metadata
+# Fetch metadata
 
 Fetch the metadata related to a QR code i.e `label`, `icon`, `candy_machine_id`
 

@@ -112,4 +112,4 @@ print(response.text)
 
 **- Gasless collections are under active development, so try to deploy small collections with a minimal number of NFTs**
 
-**- If you feel someone can drain your collection NFTs and payer wallet balance, try to use our No-Code Builder which has implemented the limit per wallet feature** (coming soon for Public APIs)
+**- If you feel someone can drain your collection NFTs and payer wallet balance, try to use our [No-Code Builder](https://candypay.fun) which has implemented the limit per wallet feature** (coming soon for Public APIs)
