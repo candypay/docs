@@ -1,4 +1,4 @@
-# Generate CandyMachine minting code
+# Generate Candy Machine minting code
 
 Generate a 'headless-minting' QR codes and Tap to Mint links for your NFT collection via its Candy Machine v2 ID. The end-user would **need to pay the gas and minting fees**
 
