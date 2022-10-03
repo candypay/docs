@@ -2,10 +2,15 @@
   "introduction": "Introduction",
   "terminology": "Terminology",
   "how-it-works": "How it works",
-  "reference": {
-    "title": "Reference"
+  "nft": {
+    "title": "NFTs"
+  },
+  "payments": {
+    "title": "Payments"
   },
   "guides": {
     "title": "Guides"
   }
 }
+
+

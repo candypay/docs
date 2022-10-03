@@ -4,7 +4,8 @@
 
 - People feel unsafe while connecting their wallets to dApps due to the increasing number of scams in the web3 space. Users don’t want to lose their assets by connecting their wallets to a _rug pull NFT minting sites_. These sketchy minting sites have already stolen millions of dollars from people on Discord and other social media platforms.
 - Most NFT project founders aren't developers and it's a pretty expensive and time-consuming process to hire one, with trust being an important factor! At the same time, creating the most delightful UX for minting is a hard process for developers, dealing with front-end, smart contract, design, and security, all at the same time.
-- With no options left, project founders head to Launchpads for their Candy Machine and NFT mint site creation, which in name of “security”, charges hefty amounts of fees from project founders and users, with little to no option for customization according to the founder’s need!
+- User experience is a major issue too as it’s not a straightforward process for the end user who will be minting the NFT. They need to be on their Desktops all the time as the current Mobile UX is unbearable. The process needs to be seamless, despite user device preferences, while keeping speed and security at best.
+
 
 ### Product
 
@@ -22,7 +23,7 @@
   - Projects can even create minting experiences, right from a Tweet, Times Square Billboards, or maybe a Hot Air Balloon? **Opportunities are endless, we are here to help you with infrastructure to make it possible!**
 
 - Developers can integrate CandyPay into their dApps with the help of CandyPay’s public API, completely free, customizable & secure to use!
-- It’s completely free for NFT Projects & developers to integrate CandyPay into their dApps! We only charge a 2% - 3% commission on every mint directly from end-users. This commission is dynamic and depends on mint price of the Candy Machine ID. If the Candy Machine’s mint price is 0.2 SOL, then CandyPay would take a commission of 0.004 SOL. This is beneficial to end-users while minting NFTs as sometimes the static commission fee might be even higher than the Candy Machine’s mint price itself.
+- It’s completely free for NFT Projects & developers to integrate CandyPay into their dApps! We only charge a 2% service fee on every mint directly from end-users. This commission is dynamic and depends on mint price of the Candy Machine ID. If the Candy Machine’s mint price is 0.2 SOL, then CandyPay would take a commission of 0.004 SOL. This is beneficial to end-users while minting NFTs as sometimes the static commission fee might be even higher than the Candy Machine’s mint price itself.
 - Most of the NFT collections start a private mint which is only available for people who are whitelisted and have a specific SPL token in their wallet. These whitelisted people would get a discount on the mint price of the Candy Machine. CandyPay supports the whitelist/allow-list feature so that the NFT collection founders don’t have to drop the whitelist idea for sake of QR code NFT minting, and can commence their private sale pretty easily.
 
 ### How does CandyPay work?

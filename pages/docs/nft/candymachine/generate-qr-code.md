@@ -1,6 +1,6 @@
-# Generate QR code
+# Generate CandyMachine minting code
 
-Generate a 'headless-mint' QR code for your NFT collection via its Candy Machine v2 ID. The end-user would **need to pay the gas fees**
+Generate a 'headless-minting' QR codes and Tap to Mint links for your NFT collection via its Candy Machine v2 ID. The end-user would **need to pay the gas and minting fees**
 
 - Base API route URL: https://public-api.candypay.fun/api/v1/generate
 - HTTP method: `POST`
@@ -15,20 +15,28 @@ Generate a 'headless-mint' QR code for your NFT collection via its Candy Machine
 | `candy_machine_id`\* | string | Candy Machine v2 ID of the NFT collection      | N/A                             |
 | `network`            | string | Network on which the Candy Machine is deployed | `mainnet`                       |
 | `label`              | string | Name of the NFT collection                     | `CandyPay`                      |
-| `icon`               | string | URL of the NFT collection's icon               | `https://candypay.fun/icon.png` |
+
+Don't have `candy_machine_id` yet? Follow this guide to create one- [Create a CandyMachine ID](https://docs.candypay.fun/docs/guides/how-to-create-a-candy-machine)
 
 ## Response
 
-On successful creation of the QR code, the API would return an response object containing the following fields, under the `metadata` object:
+On successful POST request, the API would return an response object containing the following fields, under the `metadata` object:
 
 - `qr_code_id`: ID of the QR code
-- `solana_url`: Solana protocol encoded URL which is used to render the QR code
+- `solana_url`: Solana protocol encoded URL which is used to render the QR code and create `Tap to Mint` links
 
 ## Error status codes
 
 1. `400` - Bad request. The parameters which the developer has passed in might not meet the required conditions. Check the response for more information about the error.
 2. `401` - Unauthorized. Either you might have forgot to pass in the API key or you have passed an invalid API key.
 3. `500` - Internal server error. There might have being an error in our servers. For direct support regarding this, you can join our discord server - https://discord.com/invite/VGjPXWUHGT
+
+## Usage
+
+On successful creation of `solana_url`, you can create QR Codes and Tap to Mint links to power NFT mitning in a seamless way directly from any social platform 
+
+- **QR Code**: Use any qr code utility npm package or online editors like [QR Code Monkey](https://www.qrcode-monkey.com/) to create and design minting QR Codes passing `solana_url`
+- **Mint Links**: Pass this created `solana_url` in `href` of any button or anchor tag to power Tap to Mint flow for your users
 
 ## Examples
 

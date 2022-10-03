@@ -13,3 +13,5 @@ CandyPay provides a seamless user experience by bundling necessary instructions 
 5. The wallet would decode the base58 encoded transaction and simulate the transaction on the Solana blockchain and identify the fees associated with the transaction.
 6. The user is then able to review the transaction details and sign & send the transaction for execution on the Solana blockchain.
 7. If the transaction is successful, a transaction signature is returned to the user’s wallet, and a "Transaction is successful" prompt would be shown to the user.
+
+![](https://res.cloudinary.com/dtzqgftjk/image/upload/v1664797086/Untitled-2022-08-29-2109_uxn7cr.png)
