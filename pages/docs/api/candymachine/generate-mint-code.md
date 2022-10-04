@@ -1,6 +1,6 @@
 # Generate Candy Machine minting code
 
-Generate a 'headless-minting' QR codes and Tap to Mint links for your NFT collection via its Candy Machine v2 ID. The end-user would **need to pay the gas and minting fees**
+Generate a 'headless-minting' QR code and 'tap-to-mint' links for your NFT collection via its Candy Machine v2 ID. The end-user would **need to pay the gas and minting fees**
 
 - Base API route URL: https://public-api.candypay.fun/api/v1/generate
 - HTTP method: `POST`
@@ -16,7 +16,7 @@ Generate a 'headless-minting' QR codes and Tap to Mint links for your NFT collec
 | `network`            | string | Network on which the Candy Machine is deployed | `mainnet`                       |
 | `label`              | string | Name of the NFT collection                     | `CandyPay`                      |
 
-Don't have `candy_machine_id` yet? Follow this guide to create one- [Create a Candy Machine](https://docs.candypay.fun/docs/guides/how-to-create-a-candy-machine)
+Don't have a `candy_machine_id` yet? Follow this guide to create one- [Create a Candy Machine](https://docs.candypay.fun/docs/guides/how-to-create-a-candy-machine)
 
 ## Response
 
