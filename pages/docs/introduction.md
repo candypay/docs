@@ -9,7 +9,7 @@
 
 ### Product
 
-- CandyPay is focused on simplifying and lowering the bars to entering NFT markets for a newbie. Built on top of the finest tech in the Solana ecosystem — Candy Machine v2 by Metaplex & Solana Pay, CandyPay currently offers two core products:
+- CandyPay is focused on simplifying and lowering the bars to enter NFT markets for a newbie. Built on top of the finest tech in the Solana ecosystem — Candy Machine v2 by Metaplex & Solana Pay, CandyPay currently offers two core products:
 
   - A no-code NFT minting QR code builder.
   - A public API for developers to easily integrate CandyPay in their NFT minting sites, with complete customizations and secure workflow for users.
