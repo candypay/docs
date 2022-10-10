@@ -1,4 +1,4 @@
-# How to create a Candy Machine using Sugar CLI
+# Create and launch your NFT collection on Solana (start-to-end guide)
 
 Heya builders! We're going to be launching an NFT collection on Solana in no time using Metaplex’s new Candy Machine tool — Sugar CLI. Sugar CLI comes with quite a few improvements:
 
@@ -234,8 +234,52 @@ sugar mint
 
 ![](https://imgur.com/cHWhrSb.png)
 
-# Conclusion
+## Utilizing CandyPay
 
-Congrats! You have created a Candy Machine using Metaplex's Sugar CLI and you're now ready to create a QR code mint for your Candy Machine via [CandyPay](https://candypay.fun) 🏄‍♂️
+As we have successfully created a Candy Machine, let's now create a QR code and Tap to mint link via CandyPay's [no-code builder](https://candypay.fun) for providing seamless NFT minting UX.
 
-If you have any feedback regarding this guide, reach us out on [Discord](https://discord.com/invite/VGjPXWUHGT) or [Twitter](https://twitter.com/candypayfun)
+### Creating an account
+
+Head over to https://candypay.fun and sign up for an account
+
+![](https://imgur.com/WCG7ImI.png)
+
+### Creating the QR code
+
+Select "Candy Machine" under the "Create New" dropdown
+
+![](https://imgur.com/wWTUfGz.png)
+
+We would have to provide few details regarding the Candy Machine mint code:
+
+- Title (required): The name of the NFT collection. It would be shown to the user after he scans the QR code
+- Candy Machine ID (required): It would be the ID of the Candy Machine, which we have deployed using Sugar CLI
+- RPC URL: If you want to use custom RPC URL, you can add it over here
+- Network: The Solana cluster/network where the Candy Machine has been deployed i.e either devnet or mainnet
+- Icon: Icon of the NFT collection
+
+![](https://imgur.com/MWnIgSv.png)
+
+Now we can customize our QR code according to our preferences
+
+![](https://imgur.com/c7NEqVJ.png)
+
+Click on publish and you have successfully created a QR code for minting NFT from your Candy Machine 🥳
+
+### Download the QR code
+
+To download the QR code, go ahead and open the analytics dashboard of that QR code and click on the "Download Image" button.
+
+![](https://imgur.com/KTVM8ZN.png)
+
+### Tap-to-mint links
+
+Share a single tap-to-mint link for your Candy Machine. With the help of tap-to-mint links, the user would be redirected to Phantom without having to even scan a QR code.
+
+![](https://imgur.com/Qz8r0wT.png)
+
+## Conclusion
+
+Congrats! You have created a Candy Machine using Metaplex's Sugar CLI and a mint code using CandyPay's no-code builder 🥳
+
+If you have any feedback regarding this guide, reach us out on [Discord](https://discord.gg/VGjPXWUHGT) or [Twitter](https://twitter.com/candypayfun)
