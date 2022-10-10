@@ -2,6 +2,7 @@
   "introduction": "Introduction",
   "terminology": "Terminology",
   "how-it-works": "How it works",
+  "generate-api-key": "Generate API key",
   "api": {
     "title": "Public APIs"
   },
@@ -12,5 +13,3 @@
     "title": "Guides"
   }
 }
-
-

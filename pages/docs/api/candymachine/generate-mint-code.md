@@ -4,17 +4,17 @@ Generate a 'headless-minting' QR code and 'tap-to-mint' links for your NFT colle
 
 - Base API route URL: https://public-api.candypay.fun/api/v1/generate
 - HTTP method: `POST`
-- Requires authentication. Get your API keys at https://tally.so/r/wzxrP0
+- Requires authentication. Get your API keys at https://candypay.fun/apikey
 
 ## Parameters
 
 ### Body
 
-| Name                 | Type   | Description                                    | Default                         |
-| -------------------- | ------ | ---------------------------------------------- | ------------------------------- |
-| `candy_machine_id`\* | string | Candy Machine v2 ID of the NFT collection      | N/A                             |
-| `network`            | string | Network on which the Candy Machine is deployed | `mainnet`                       |
-| `label`              | string | Name of the NFT collection                     | `CandyPay`                      |
+| Name                 | Type   | Description                                    | Default    |
+| -------------------- | ------ | ---------------------------------------------- | ---------- |
+| `candy_machine_id`\* | string | Candy Machine v2 ID of the NFT collection      | N/A        |
+| `network`            | string | Network on which the Candy Machine is deployed | `mainnet`  |
+| `label`              | string | Name of the NFT collection                     | `CandyPay` |
 
 Don't have a `candy_machine_id` yet? Follow this guide to create one- [Create a Candy Machine](https://docs.candypay.fun/docs/guides/how-to-create-a-candy-machine)
 
@@ -33,7 +33,7 @@ On successful POST request, the API would return an response object containing t
 
 ## Usage
 
-On successful creation of `solana_url`, you can create QR Codes and Tap to Mint links to power NFT mitning in a seamless way directly from any social platform 
+On successful creation of `solana_url`, you can create QR Codes and Tap to Mint links to power NFT mitning in a seamless way directly from any social platform
 
 - **QR Code**: Use this [createQR function](https://docs.solanapay.com/api/core/function/createQR) from `@solana/pay` SDK or online editors like [QR Code Monkey](https://www.qrcode-monkey.com/) to create and design minting QR Codes passing `solana_url`
 - **Mint Links**: Pass this created `solana_url` in `href` of any button or anchor tag to power Tap to Mint flow for your users

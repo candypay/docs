@@ -4,7 +4,7 @@ Fetch the metadata related to a QR code i.e `label`, `icon`, `candy_machine_id`
 
 - Base API route URL: https://public-api.candypay.fun/api/v1/qrcode/metadata
 - HTTP method: `GET`
-- Requires authentication. Get your API keys at https://tally.so/r/wzxrP0
+- Requires authentication. Get your API keys at https://candypay.fun/apikey
 
 ## Parameters
 

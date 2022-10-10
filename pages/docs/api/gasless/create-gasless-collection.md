@@ -4,21 +4,21 @@ Create a Gasless NFT collection with it's 'headless-minting' QR code and Tap to 
 
 - Base API route URL: https://public-api.candypay.fun/api/v1/gasless/generate
 - HTTP method: `POST`
-- Requires authentication. Get your API keys at https://tally.so/r/wzxrP0
+- Requires authentication. Get your API keys at https://candypay.fun/apikey
 
 ## Parameters
 
 ### Body
 
-| Name                 | Type   | Description                                    | Example                              |
-| -------------------- | ------ | ---------------------------------------------- | ------------------------------------ |
-| `name`               | string | Name of the NFT collection                     | Candy Land                           |
-| `symbol`             | string | Symbol of the NFT collection                   | CNDY                                 |
-| `uri`\*              | string | Metadata url of the collection                 | https://metadata.degods.com/g/4.json |
-| `seller_fee`         | number | Royalty fees charged on secondary sale         | `6` for 6%                           |
-| `collection_size`\*  | number | Total NFTs to be minted from this collection   | `50` for a collection of 50 NFTs     |
-| `network`\*          | string | Network on which collection will be created    | `mainnet` or `devnet`                |
-| `label`              | string | Name of the NFT collection                     | Candy Land                           |
+| Name                | Type   | Description                                  | Example                              |
+| ------------------- | ------ | -------------------------------------------- | ------------------------------------ |
+| `name`              | string | Name of the NFT collection                   | Candy Land                           |
+| `symbol`            | string | Symbol of the NFT collection                 | CNDY                                 |
+| `uri`\*             | string | Metadata url of the collection               | https://metadata.degods.com/g/4.json |
+| `seller_fee`        | number | Royalty fees charged on secondary sale       | `6` for 6%                           |
+| `collection_size`\* | number | Total NFTs to be minted from this collection | `50` for a collection of 50 NFTs     |
+| `network`\*         | string | Network on which collection will be created  | `mainnet` or `devnet`                |
+| `label`             | string | Name of the NFT collection                   | Candy Land                           |
 
 ## Response
 
@@ -57,13 +57,13 @@ const generateQRCode = async () => {
     "https://public-api.candypay.fun/api/v1/gasless/generate",
     {
       data: {
-        name:"Candy Land",
-        symbol:"CNDY",
-        uri:"https://metadata.degods.com/g/4.json",
-        seller_fee:10,
-        collection_size:50,
-        network:"devnet",
-        label:"Candy Land"
+        name: "Candy Land",
+        symbol: "CNDY",
+        uri: "https://metadata.degods.com/g/4.json",
+        seller_fee: 10,
+        collection_size: 50,
+        network: "devnet",
+        label: "Candy Land",
       },
       headers: {
         Authorization: `Bearer ${process.env.CANDYPAY_API_KEY}`,
@@ -106,7 +106,8 @@ print(response.text)
 
 ## Disclaimer
 
-**- Minting won’t work if,** 
+**- Minting won’t work if,**
+
 - the resulting `public_key` is not funded based on the required `amount`
 - the network of the created collection is different than that of the network of the user wallet
 

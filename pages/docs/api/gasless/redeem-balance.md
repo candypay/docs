@@ -1,26 +1,26 @@
 # Redeem $SOL balance from payer wallet
 
-After creating Gasless collection earlier, creator had to fund $SOL to a proxy `payer` wallet address to power Gas fees so users can mint NFTs in a gasless manner. Fortunately, creators can redeem this balance back to their personal wallet address once the usecase is completed and there won't be any more minting happening in there collection. This is how they can redeem this balance,
+After creating Gasless collection earlier, creator had to fund $SOL to a proxy `payer` wallet address to power Gas fees so users can mint NFTs in a gasless manner. Fortunately, creators can redeem this balance back to their personal wallet address once the use-case is completed and there won't be any more minting happening in there collection. This is how they can redeem this balance,
 
 - Base API route URL: https://public-api.candypay.fun/api/v1/gasless/redeem-funds
 - HTTP method: `POST`
-- Requires authentication. Get your API keys at https://tally.so/r/wzxrP0
+- Requires authentication. Get your API keys at https://candypay.fun/apikey
 
 ## Parameters
 
 ### Body
 
-| Name                 | Type   | Description                                    | Example                                       |
-| -------------------- | ------ | ---------------------------------------------- | --------------------------------------------- |
-| `id`\*               | string | `qr_code_id`of the collection                  | `Q5ZRUp_RcZlbKOw3BXO6S`                       |
-| `amount`\*           | number | amount of $SOL you want to redeem              | 0.4                                           |
-| `address`\*          | string | wallet address which will receive this amount  | `5T1ssgMSLm6ZowCmASkefDrPqSsg2RRVU3BvZoiyj1uc`|
+| Name        | Type   | Description                                   | Example                                        |
+| ----------- | ------ | --------------------------------------------- | ---------------------------------------------- |
+| `id`\*      | string | `qr_code_id` of the collection                | `Q5ZRUp_RcZlbKOw3BXO6S`                        |
+| `amount`\*  | number | Amount of $SOL you want to redeem             | 0.4                                            |
+| `address`\* | string | Wallet address which will receive this amount | `5T1ssgMSLm6ZowCmASkefDrPqSsg2RRVU3BvZoiyj1uc` |
 
 ## Response
 
 On successful POST request, the API would redeem the balance from `payer` wallet to `recipient` wallet address and response this:
 
-- `message`: Success prompt for redeemption with the `amount` redeemed
+- `message`: Success prompt for redemption with the `amount` redeemed
 - `signature`: transaction signature of this transaction which you can look up for more details in block explorers
 
 ## Error status codes
