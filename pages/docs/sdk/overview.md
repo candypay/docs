@@ -1,23 +1,21 @@
-# CandyPay SDK
+# `@candypay/sdk`
 
 CandyPay SDK lets you effortlessly create NFT minting functions for Candy Machine v2 collections. Simulate minting transactions for multiple use-cases like NFT collection launch, gasless mint and many more on Solana Blockchain!
 
 ## Installation
 
-To install the SDK, run the following command:
-
-```
-npm install @candypay/sdk
-      or
-yarn add @candypay/sdk
+```bash
+npm install @candypay/sdk @project-serum/anchor
 ```
 
-## Documentation
+## Setup
 
-The SDK currently has two core functions:
+The entry point to the SDK is a `CandyPay` instance that will give you access to its API.
 
-- `candypay.mint()`
-- `candypay.gasless()`
+```ts
+import { CandyPay } from "@candypay/sdk";
+const candypay = new CandyPay();
+```
 
 ## Using along Next.js
 

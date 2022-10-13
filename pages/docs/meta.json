@@ -9,6 +9,9 @@
   "payments": {
     "title": "Payments"
   },
+  "sdk": {
+    "title": "Utility SDK"
+  },
   "guides": {
     "title": "Guides"
   }
