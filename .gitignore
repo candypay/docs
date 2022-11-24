@@ -1,6 +1,5 @@
 node_modules
 .next
-.nextra
 .vercel
 .DS_Store
 dist
