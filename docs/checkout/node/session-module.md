@@ -27,7 +27,9 @@ The `create` method creates and creates a new checkout session with the required
           price: 43.57,
           image: "https://imgur.com/EntGcVQ.png",
           quantity: 1,
+          size: "M",
         },
       ],
+      shipping_fees: 0.43,
     });
     ```

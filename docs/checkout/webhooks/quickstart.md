@@ -39,8 +39,8 @@ A webhook is an endpoint on your server that receives incoming requests regardin
 
 ```ts
 app.post("/webhook", async (req: Request, res: Response) => {
+  const headers = req.headers;
   const payload = req.body;
-  const signature = req.headers["x-candypay-signature"];
 
   const candypay = new CandyPay({
     api_key: process.env.CANDYPAY_API_KEY!,
@@ -53,7 +53,7 @@ app.post("/webhook", async (req: Request, res: Response) => {
   try {
     await candypay.webhook.verify({
       payload,
-      signature: signature as string,
+      headers: headers as Record<string, string>,
       webhook_secret: process.env.WEBHOOK_SECRET!,
     });
   } catch (err) {
