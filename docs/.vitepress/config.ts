@@ -8,7 +8,16 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: "without-subfolders",
 
-  head: [["meta", { name: "theme-color", content: "#8b55ff" }]],
+  head: [
+    ["meta", { name: "theme-color", content: "#8b55ff" }],
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "https://candypay.fun/logo.png",
+      },
+    ],
+  ],
 
   markdown: {
     headers: {
@@ -17,6 +26,8 @@ export default defineConfig({
   },
 
   themeConfig: {
+    logo: "https://candypay.fun/logo.png",
+
     nav: [
       {
         text: "Discord",
@@ -53,7 +64,7 @@ export default defineConfig({
         items: [
           {
             text: "Introduction",
-            link: "/checkout/",
+            link: "/checkout/introduction",
           },
           {
             text: "Getting Started",
@@ -61,47 +72,15 @@ export default defineConfig({
           },
           {
             text: "Node SDK",
-            items: [
-              {
-                text: "Overview",
-                link: "/checkout/node/",
-              },
-              {
-                text: "Session module",
-                link: "/checkout/node/session-module",
-              },
-              {
-                text: "Webhook module",
-                link: "/checkout/node/webhook-module",
-              },
-            ],
+            link: "/checkout/node-sdk",
           },
           {
             text: "React SDK",
-            items: [
-              {
-                text: "Overview",
-                link: "/checkout/react/",
-              },
-            ],
+            link: "/checkout/react-sdk",
           },
           {
             text: "Webhooks",
-            items: [
-              {
-                text: "Quickstart",
-                link: "/checkout/webhooks/quickstart",
-              },
-            ],
-          },
-          {
-            text: "Concepts",
-            items: [
-              {
-                text: "Atomic transactions",
-                link: "/checkout/concepts/atomic-transactions",
-              },
-            ],
+            link: "/checkout/webhooks",
           },
         ],
       },
@@ -114,26 +93,15 @@ export default defineConfig({
             link: "/utility-sdk/",
           },
           {
-            text: "Modules",
-            items: [
-              {
-                text: "Candy Machine",
-                link: "/utility-sdk/modules/candy-machine",
-              },
-              {
-                text: "NFT",
-                link: "/utility-sdk/modules/nft",
-              },
-            ],
+            text: "Candy Machine module",
+            link: "/utility-sdk/candy-machine",
+          },
+          {
+            text: "NFT module",
+            link: "/utility-sdk/nft",
           },
         ],
       },
     ],
-
-    algolia: {
-      appId: "8J64VVRP8K",
-      apiKey: "a18e2f4cc5665f6602c5631fd868adfd",
-      indexName: "vitepress",
-    },
   },
 });
