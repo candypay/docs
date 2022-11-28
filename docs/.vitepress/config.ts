@@ -28,6 +28,11 @@ export default defineConfig({
   themeConfig: {
     logo: "https://candypay.fun/logo.png",
 
+    editLink: {
+      pattern: "https://github.com/candypay/docs/edit/main/docs/:path",
+      text: "Suggest changes to this page",
+    },
+
     nav: [
       {
         text: "Discord",
@@ -50,11 +55,11 @@ export default defineConfig({
           },
           {
             text: "Terminology",
-            link: "/terminology",
+            link: "/terminology.html",
           },
           {
             text: "How it works",
-            link: "/how-it-works",
+            link: "/how-it-works.html",
           },
         ],
       },
@@ -64,23 +69,23 @@ export default defineConfig({
         items: [
           {
             text: "Introduction",
-            link: "/checkout/introduction",
+            link: "/checkout/introduction.html",
           },
           {
             text: "Getting Started",
-            link: "/checkout/getting-started",
+            link: "/checkout/getting-started.html",
           },
           {
             text: "Node SDK",
-            link: "/checkout/node-sdk",
+            link: "/checkout/node-sdk.html",
           },
           {
             text: "React SDK",
-            link: "/checkout/react-sdk",
+            link: "/checkout/react-sdk.html",
           },
           {
             text: "Webhooks",
-            link: "/checkout/webhooks",
+            link: "/checkout/webhooks.html",
           },
         ],
       },
@@ -90,15 +95,15 @@ export default defineConfig({
         items: [
           {
             text: "Overview",
-            link: "/utility-sdk/",
+            link: "/utility-sdk/index.html",
           },
           {
             text: "Candy Machine module",
-            link: "/utility-sdk/candy-machine",
+            link: "/utility-sdk/modules/candy-machine.html",
           },
           {
             text: "NFT module",
-            link: "/utility-sdk/nft",
+            link: "/utility-sdk/modules/nft.html",
           },
         ],
       },
