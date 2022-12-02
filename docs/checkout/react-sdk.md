@@ -36,7 +36,7 @@ import { useCheckout } from "@candypay/react-checkout-sdk";
 const genSessionId = async () => {
   const response = await fetch("/api/session");
   const data = await response.json();
-  return data.sessionId;
+  return data.session_id;
 };
 };
 

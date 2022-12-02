@@ -94,6 +94,16 @@ export default defineConfig({
         ],
       },
       {
+        text: "Guides",
+        collapsible: true,
+        items: [
+          {
+            text: "Create NFT collection",
+            link: "/guides/create-and-launch-nft-collection.html",
+          },
+        ],
+      },
+      {
         text: "Utility SDK",
         collapsible: true,
         items: [

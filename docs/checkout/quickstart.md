@@ -2,7 +2,7 @@
 
 A quickstart guide to integrate CandyPay Checkout into your application. In the following guide we're going to use Next.js as the frontend framework as it supports API routes by default.
 
-::: tip Full source code for the demo app available [here](https://github.com/candypay/checkout-demo-example.git)
+::: tip :zap: Full source code for the demo app available [here](https://github.com/candypay/checkout-demo-example.git)
 :::
 
 ## Setting up the application
@@ -198,6 +198,6 @@ Your base app is ready to accept Solana Payments with Checkout SDK in mins! Make
 Set up webhooks to detect and fulfill new payments and run post-checkout events such as saving the transaction details to a database, sending custom emails, and others
 :::
 
-::: info • [Demo Ecommerce app](https://github.com/candypay/checkout-ecom-example.git)
-Access this demo Ecommmerce webiste accepting Solana payments with Checkout SDK and refer it to create your own more complex applications accepting crypto payments
+::: info • [Demo e-commerce app](https://github.com/candypay/checkout-ecom-example.git)
+Access this demo e-commmerce webiste accepting Solana payments with Checkout SDK and refer it to create your own more complex applications accepting crypto payments
 :::
