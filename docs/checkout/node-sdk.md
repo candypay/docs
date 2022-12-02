@@ -39,7 +39,8 @@ The `session` module can be accessed via `candypay.session()` and provides the f
 
 The `create` method creates and creates a new checkout session with the required configuration. It takes in the following parameters and returns `session_id`:
 
-- `items` - An array of items which would be displayed on the checkout page. Each element of the `items` array is an object which would contain the `name`, `price`, `image` and `quantity` of the product
+- `items` - An array of items which would be displayed on the checkout page. Each element of the `items` array is an object which would contain the `name`, `price`, `image`, `quantity` and `size` of the product
+- `shipping_fees` - An optional param which takes shipping fees (value in $USD) and add it on total cart value to charge users (we currently only support static value for shipping fees, please charge accordingly)
 - `tokens` - An array of SPL tokens in which the customer could pay. By default, `SOL` and [`USDC`](https://explorer.solana.com/address/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v) ([`USDC-DEV`](https://explorer.solana.com/address/Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr?cluster=devnet) on devnet) would be shown to the customer on the checkout page. Currently, CandyPay checkout only supports the following tokens on mainnet:
 
   - [`SAMO`](https://explorer.solana.com/address/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU)
@@ -48,20 +49,19 @@ The `create` method creates and creates a new checkout session with the required
 
     ```ts
     const session = await sdk.session.create({
-      amount: amount,
-      success_url: "https://your-website.com/checkout/session",
+      success_url: "https://your-website.com/checkout/success",
       cancel_url: "https://your-website.com/checkout/cancel",
       tokens: ["dust", "samo", "shdw"],
       items: [
         {
           name: "Throwback Hip Bag",
-          price: 43.57,
+          price: 43.57, // value in USD 
           image: "https://imgur.com/EntGcVQ.png",
           quantity: 1,
-          size: "M",
+          size: "M", // optional
         },
       ],
-      shipping_fees: 0.43,
+      shipping_fees: 0.43, // optional | value in USD
     });
     ```
 
@@ -86,3 +86,4 @@ The `register` method registers a webhook for a specific checkout session for li
     description: "webhook for my e-com site",
   });
   ```
+  Access more details about [Webhooks Module here!](../checkout/webhooks.md)

@@ -2,6 +2,9 @@
 
 A quickstart guide to integrate CandyPay Checkout into your application. In the following guide we're going to use Next.js as the frontend framework as it supports API routes by default.
 
+::: tip Full source code for the demo app available [here](https://github.com/candypay/checkout-demo-example.git)
+:::
+
 ## Setting up the application
 
 Create a new Next.js application using `create-next-app`. You can remove the `--ts` flag if you don't want to use TypeScript.
@@ -30,7 +33,7 @@ import { CandyPayProvider } from "@candypay/react-checkout-sdk";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <CandyPayProvider
-      publicApiKey={process.env.NEXT_PUBLIC_CANDYPAY_PUBLIC_API_KEY!}
+      publicApiKey={process.env.NEXT_PUBLIC_CP_API!}
     >
       <Component {...pageProps} />
     </CandyPayProvider>
@@ -44,14 +47,14 @@ export default MyApp;
 
 As creating a checkout session requires the developer to pass his private API key we're going to create a Next.js API route which would handling the logic for creating a session, so that the private API keys don't get exposed on the client-side.
 
-Create a new file named `checkout.ts` under the `pages/api` folder and initialize the Node SDK. If you want to collect the end-user's shipping address, change the `collect_shipping_address` parameter to `true`
+Create a new file named `create-session.ts` under the `pages/api` folder and initialize the Node SDK. If you want to collect the end-user's shipping address, change the `collect_shipping_address` parameter to `true`
 
 ```ts
 import { CandyPay } from "@candypay/checkout-sdk";
 
 const sdk = new CandyPay({
   api_key: process.env.CANDYPAY_PRIVATE_API_KEY!,
-  network: "devnet",
+  network: "mainnet", // use 'mainnet' for prod and 'devnet' for dev environment
   config: {
     collect_shipping_address: false,
   },
@@ -66,15 +69,17 @@ const handler = async (req, res) => {
     const response = await sdk.session.create({
       success_url: `${process.env.STATIC_URL}/success`,
       cancel_url: `${process.env.STATIC_URL}/cancel`,
-      tokens: ["dust", "samo"], // additional tokens
+      tokens: ["dust", "samo"], // additional tokens you can pass, $SOL and $USDC are default
       items: [
         {
           name: "Solana Shades",
           price: 0.1, // price in USD
           image: "https://imgur.com/M0l5SDh.png",
           quantity: 1,
+          size: "9", // optional product size param
         },
       ],
+       shipping_fees: 0.5, // optional shipping charges param, value in USD
     });
 
     return res.status(200).json(response);
@@ -155,7 +160,7 @@ import { CheckoutButton } from "@candypay/react-checkout-sdk";
 
 const Home: NextPage = () => {
   const createSession = async () => {
-    const response = await fetch("/api/checkout", {
+    const response = await fetch("/api/create-session", {
       method: "POST",
     });
     const data = await response.json();
@@ -182,3 +187,17 @@ const Home: NextPage = () => {
 
 export default Home;
 ```
+
+## Congratulations! :partying_face:
+
+Your base app is ready to accept Solana Payments with Checkout SDK in mins! Make sure to test your website and contact us at [Discord](https://discord.gg/VGjPXWUHGT) if you face any issues! Full source code available [here.](https://github.com/candypay/checkout-demo-example.git)
+
+## Next steps
+
+::: info • [Webhooks](../checkout/webhooks.html)
+Set up webhooks to detect and fulfill new payments and run post-checkout events such as saving the transaction details to a database, sending custom emails, and others
+:::
+
+::: info • [Demo Ecommerce app](https://github.com/candypay/checkout-ecom-example.git)
+Access this demo Ecommmerce webiste accepting Solana payments with Checkout SDK and refer it to create your own more complex applications accepting crypto payments
+:::

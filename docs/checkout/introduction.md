@@ -1,7 +1,8 @@
 # Checkout by CandyPay
 
-We are building a low-code checkout solution, powering seamless, mobile-native, and effortless Payment infrastructure for web3 businesses, where you can get started accepting Solana payments in a few lines of code!
+A low-code checkout solution, powering seamless, mobile-native, and effortless Payment infrastructure for web3 businesses, where you can get started accepting Solana payments in a few lines of code!
 
+Sounds amazing? [Quickstart](../checkout/quickstart.html) integration now!
 ## Problems we’re solving
 
 Cryptocurrency payments have multiple upsides over traditional rails including no fees, no charge-backs, and instant settlements, globally connected and accessible from day one, but currently accepting cryptocurrency, let alone Solana payments is hard!. The three major friction for businesses to accept Solana Payments are:

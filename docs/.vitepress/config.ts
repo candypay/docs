@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   lang: "en-US",
   title: "CandyPay",
-  description: "Seamless mobile native UX on Solana",
+  description: "Seamless, mobile-native NFT & Payments experiences on Solana",
 
   lastUpdated: true,
   cleanUrls: "without-subfolders",
@@ -14,7 +14,7 @@ export default defineConfig({
       "link",
       {
         rel: "icon",
-        href: "https://candypay.fun/logo.png",
+        href: "https://res.cloudinary.com/dtzqgftjk/image/upload/v1669972940/2_cdaoyi_1_somgup.png",
       },
     ],
   ],
@@ -72,8 +72,12 @@ export default defineConfig({
             link: "/checkout/introduction.html",
           },
           {
-            text: "Getting Started",
-            link: "/checkout/getting-started.html",
+            text: "How it works",
+            link: "/checkout/how-it-works.html",
+          },
+          {
+            text: "Quickstart",
+            link: "/checkout/quickstart.html",
           },
           {
             text: "Node SDK",
