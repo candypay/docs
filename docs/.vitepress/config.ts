@@ -35,15 +35,24 @@ export default defineConfig({
 
     nav: [
       {
-        text: "Discord",
-        link: "https://discord.gg/VGjPXWUHGT",
+        text: "Get Started",
+        link: "/checkout/introduction.html",
       },
       {
-        text: "Twitter",
-        link: "https://candypayfun",
+        text: "Checkout",
+        link: "/checkout/introduction.html",
       },
     ],
 
+    socialLinks: [
+      { icon: "twitter", link: "https://twitter.com/candypayfun" },
+      { icon: "discord", link: "https://dsc.gg/candypay" },
+    ],
+
+    footer: {
+      copyright: "Built on Solana",
+    },
+    
     sidebar: [
       {
         text: "Getting Started",
@@ -51,7 +60,7 @@ export default defineConfig({
         items: [
           {
             text: "Introduction",
-            link: "/",
+            link: "/introduction.html",
           },
           {
             text: "Terminology",
