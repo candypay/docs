@@ -3,6 +3,7 @@
 A low-code checkout solution, powering seamless, mobile-native, and effortless Payment infrastructure for web3 businesses, where you can get started accepting Solana payments in a few lines of code!
 
 Sounds amazing? [Quickstart integration now!](../checkout/quickstart.html)
+
 ## Problems we’re solving
 
 Cryptocurrency payments have multiple upsides over traditional rails including no fees, no charge-backs, and instant settlements, globally connected and accessible from day one, but currently accepting cryptocurrency, let alone Solana payments is hard!. The three major friction for businesses to accept Solana Payments are:
@@ -31,7 +32,7 @@ To solve these problems, we created "Checkout", in the first release we'll power
 
 Checkout is a low-code solution for businesses to accept Solana Payments with ease. It powers a pre-built checkout page with all the necessary components it takes for businesses to accept and users to pay in Solana and SPL tokens. No tech jargon, no need to handle wallets, QR codes, or building everything from scratch, we do that for you! Meanwhile, the end-user experience is Top-Notch and built to convert them into paid users, by offering multiple payment streams (Connect wallet for desktop, Tap to Pay for mobile, and QR Code payment for IRL payments) and major Solana tokens (USDC, SOL, DUST, etc.)
 
-### 2. First payments solution, powering ‘one-click’ Tap to Pay UX for mobile
+### 2. Powering ‘one-click’ Tap to Pay UX for mobile
 
 We are proud to be the first-ever fully mobile native payments solution offering ‘one-click’ Tap to Pay UX for mobile users, which is on par with that of Apple Pay and Google Pay and is built on the ‘[Solana Pay](https://solanapay.com/) protocol’!
 

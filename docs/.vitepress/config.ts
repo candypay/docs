@@ -26,7 +26,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: "https://candypay.fun/logo.png",
+    logo: "https://res.cloudinary.com/dtzqgftjk/image/upload/v1669972940/2_cdaoyi_1_somgup.png",
 
     editLink: {
       pattern: "https://github.com/candypay/docs/edit/main/docs/:path",
@@ -52,7 +52,7 @@ export default defineConfig({
     footer: {
       copyright: "Built on Solana",
     },
-    
+
     sidebar: [
       {
         text: "Getting Started",
