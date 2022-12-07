@@ -66,10 +66,6 @@ export default defineConfig({
             text: "Terminology",
             link: "/terminology.html",
           },
-          {
-            text: "How it works",
-            link: "/how-it-works.html",
-          },
         ],
       },
       {

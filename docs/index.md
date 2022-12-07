@@ -8,9 +8,6 @@ hero:
     - theme: brand
       text: Get Started
       link: /checkout/introduction.html
-    - theme: alt
-      text: Login on Dashboard
-      link: https://dashboard.candypay.fun
 
 features:
   - icon: ⚡️
