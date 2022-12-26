@@ -96,6 +96,10 @@ export default defineConfig({
             text: "Webhooks",
             link: "/checkout/webhooks.html",
           },
+          {
+            text: "Discounts",
+            link: "/checkout/discounts.html",
+          },
         ],
       },
       {

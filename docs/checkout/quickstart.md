@@ -194,10 +194,12 @@ Your base app is ready to accept Solana Payments with Checkout SDK in mins! Make
 
 ## Next steps
 
-::: info • [Webhooks](../checkout/webhooks.html)
+::: info 🔥 [Webhooks](../checkout/webhooks.html)
 Set up webhooks to detect and fulfill new payments and run post-checkout events such as saving the transaction details to a database, sending custom emails, and others
 :::
-
-::: info • [Demo e-commerce app](https://github.com/candypay/checkout-ecom-example.git)
+::: info 🎉 [Discounts](../checkout/discounts.html)
+Reduce the amount charged to a customer by discounting their total due amount by a certain %, based on their NFT assets ownership
+:::
+::: info 🎀 [Demo e-commerce app](https://github.com/candypay/checkout-ecom-example.git)
 Access this demo e-commmerce webiste accepting Solana payments with Checkout SDK and refer it to create your own more complex applications accepting crypto payments
 :::
