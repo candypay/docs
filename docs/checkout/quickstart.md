@@ -53,10 +53,14 @@ Create a new file named `create-session.ts` under the `pages/api` folder and ini
 import { CandyPay } from "@candypay/checkout-sdk";
 
 const sdk = new CandyPay({
-  api_key: process.env.CANDYPAY_PRIVATE_API_KEY!,
+  api_keys: {
+    private_api_key: process.env.CANDYPAY_PRIVATE_API_KEY!,
+    public_api_key: process.env.CANDYPAY_PUBLIC_API_KEY!
+  },
   network: "mainnet", // use 'mainnet' for prod and 'devnet' for dev environment
   config: {
     collect_shipping_address: false,
+    redirect_with_session_id: false
   },
 });
 ```
@@ -69,17 +73,20 @@ const handler = async (req, res) => {
     const response = await sdk.session.create({
       success_url: `${process.env.STATIC_URL}/success`,
       cancel_url: `${process.env.STATIC_URL}/cancel`,
-      tokens: ["dust", "samo"], // additional tokens you can pass, $SOL and $USDC are default
+      // additional tokens you can pass, SOL and USDC are default
+      tokens: ["dust", "samo"],
       items: [
         {
           name: "Solana Shades",
-          price: 0.1, // price in USD
+          // price in USD
+          price: 0.1,
           image: "https://imgur.com/M0l5SDh.png",
           quantity: 1,
-          size: "9", // optional product size param
+          // optional product size parameter
+          size: "9",
         },
       ],
-       shipping_fees: 0.5, // optional shipping charges param, value in USD
+      shipping_fees: 0.5,
     });
 
     return res.status(200).json(response);

@@ -28,8 +28,8 @@ The entrypoint to the Node.js SDK is `CandyPay` instance that will give you acce
     },
     network: "mainnet",
     config: {
-      collect_shipping_address: true,
-      redirect_with_session_id: true
+      collect_shipping_address: false,
+      redirect_with_session_id: false
     },
   });
   ```
