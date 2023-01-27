@@ -38,10 +38,6 @@ export default defineConfig({
         text: "Get Started",
         link: "/checkout/introduction.html",
       },
-      {
-        text: "Checkout",
-        link: "/checkout/introduction.html",
-      },
     ],
 
     socialLinks: [

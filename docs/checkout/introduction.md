@@ -69,9 +69,10 @@ Our Checkout solution is non-custodial forever, i.e **we don’t hold your funds
 
 ## Platform fees
 
-Our platform fee is not decided yet and is still under active discussions! For the **Launch Partners** (First 100 businesses/merchants accepting Solana Payments with our infrastructure), we are taking it custom with a 1/1 interaction based on the needs and volume of your company where we offer you a number of first transactions completely free without any charges, and the rest for minimal % processing fee per transactions, for the first 4 months till we conclude on a final pricing model!
+Our final platform fee is still under active discussion!
+For the Launch Partners, we are only charging a small 1% fee on each payment, for the first 4 months till we conclude a final pricing model! 
 
-We promise to serve you the best in class, and only earn when your business and customer feel satisfied! Web2 alternatives like Stripe charges 6.2% per transaction for international payments and we ought to take that down drastically for merchants like you to serve a global audience and earn significantly more from day 0!
+NO set-up, hidden, or one-time fees, we only charge whenever you earn something while powering the most seamless UX which works best for both you as a merchant and your users!
 
 ## Get in touch
 
