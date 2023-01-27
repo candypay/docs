@@ -32,13 +32,14 @@ To solve these problems, we created "Checkout", in the first release we'll power
 
 Checkout is a low-code solution for businesses to accept Solana Payments with ease. It powers a pre-built checkout page with all the necessary components it takes for businesses to accept and users to pay in Solana and SPL tokens. No tech jargon, no need to handle wallets, QR codes, or building everything from scratch, we do that for you! Meanwhile, the end-user experience is Top-Notch and built to convert them into paid users, by offering multiple payment streams (Connect wallet for desktop, Tap to Pay for mobile, and QR Code payment for IRL payments) and major Solana tokens (USDC, SOL, DUST, etc.)
 
+![Checkout page](https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/checkout-C%20(1).png)
 ### 2. Powering ‘one-click’ Tap to Pay UX for mobile
 
 We are proud to be the first-ever fully mobile native payments solution offering ‘one-click’ Tap to Pay UX for mobile users, which is on par with that of Apple Pay and Google Pay and is built on the ‘[Solana Pay](https://solanapay.com/) protocol’!
 
 ## Features
 
-### Non-Custodial, forever
+- **Non-Custodial, forever**
 
 Our Checkout solution is non-custodial forever, i.e **we don’t hold your funds at any point**, and payments get transferred to your Solana wallet with an **instant settlement** as soon as someone made a payment on your website or app!
 
@@ -46,9 +47,13 @@ Our Checkout solution is non-custodial forever, i.e **we don’t hold your funds
 
   We power merchant onboarding through a powerful dashboard where teams can manage all their payments, API Keys, business name + assets, and everything included in order to keep your payments going breeze! Further versions will also support analytics to analyze your business performance and serve users better
 
+![Dashboard](https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/image%20(6).png)
+
 - **Support for swap transactions**
 
   Cryptocurrencies are volatile in nature and businesses need to secure their earnings from price fluctuations! To ensure this, we support "Swap Transactions", where end users can choose to pay from multiple supported SPL tokens (SAMO, DUST, GARI) and SOL itself, but merchants will only receive USDC (fully backed stablecoin) and can remain stress free from price fluctuations!
+
+![Swap TX](https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/image%20(10).png)
 
 - **Mobile Native, Multi Pay methods with the best UX**
 
@@ -58,6 +63,16 @@ Our Checkout solution is non-custodial forever, i.e **we don’t hold your funds
   - Connect wallet, and extension wallet payments for desktop
   - One-click tap to pay for mobile
   - QR Code scan to pay for desktop and mobile both
+
+- **NFT ownership-based Discounts**
+Merchants who have their own NFT collections or have a user base from an NFT community can reward their members and power NFT ownership-based dynamic discounts on total cart value right on Checkout Page! This not only helps increase conversion for sales as users get the same products/services at a discounted rate but also increase direct conversion and motivation for users to buy your selected NFT! A demo video of discounted Checkout is available [here!](https://twitter.com/candypayfun/status/1607523025481789442?s=20&t=3iC2V2gt9PcIBBU2yvFb6w)
+
+![NFT Ownership based discounts](https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/image%20(11).png)
+
+- **Loyalty Incentivisation**
+Rewarding top customers with Airdrops, Raffle Entries, etc. have been a great part of web3 marketing and for the first time ever we made it easy for merchants to reward and incentivize their top and loyal customers in a seamless manner! Merchants get access to processed and refined data for each and every unique customer of theirs, which then can be utilized to support Airdrop, Raffle entries, Discounts, and multiple other methods
+
+![Loyalty Incentivisation](https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/image%20(12).png)
 
 - **Multiple SPL tokens support**
 
@@ -80,4 +95,4 @@ Loved Checkout and are excited to power seamless, mobile-native, and best-in-cla
 
 - **Twitter** - https://twitter.com/candypayfun
 - **Mail** - [hello@candypay.fun](mailto:hello@candypay.fun)
-- **Discord** - https://discord.gg/VGjPXWUHGT
+- **Discord** - https://dsc.gg/candypay
