@@ -1,6 +1,7 @@
 # Implementing custom webhooks
 
 CandyPay checkout allows developer to setup their own webhooks to listen events such as `transaction.successful`, `transaction.failed` and run post-checkout events such as saving the transaction details to a database.
+
 ::: tip :zap: Full source code for the example webhook server available [here](https://github.com/candypay/checkout-webhook-example)
 :::
 
@@ -40,20 +41,14 @@ app.listen(3000, () => {
 A webhook is an endpoint on your server that receives incoming requests regarding checkout session's transaction updates from CandyPay. Add a new `POST` endpoint to your server.
 
 ```ts
+import { verifyWebhookSignature } from "@candypay/checkout-sdk";
+
 app.post("/webhook", async (req: Request, res: Response) => {
   const headers = req.headers;
   const payload = req.body;
 
-  const candypay = new CandyPay({
-    api_key: process.env.CANDYPAY_API_KEY!,
-    network: "devnet",
-    config: {
-      collect_shipping_address: false,
-    },
-  });
-
   try {
-    await candypay.webhook.verify({
+    await verifyWebhookSignature({
       payload,
       headers: headers as Record<string, string>,
       webhook_secret: process.env.WEBHOOK_SECRET!,

@@ -13,6 +13,7 @@ The entrypoint to the Node.js SDK is `CandyPay` instance that will give you acce
 - `private_api_key` - The private API key which is been issued to the developer while generating an API key
 - `network` - The Solana cluster on which the payment checkout would take place i.e either `mainnet` or `devnet`
 - `collect_shipping_address` - A boolean to configure whether to show a shipping address form on the checkout page
+- `redirect_with_session_id` - A boolean to configure whether the `success_url` must include the session ID on redirect
 
   ```ts
   import { CandyPay } from "@candypay/checkout-sdk";
@@ -21,10 +22,14 @@ The entrypoint to the Node.js SDK is `CandyPay` instance that will give you acce
   dotenv.config();
 
   const candypay = new CandyPay({
-    private_api_key: process.env.CANDYPAY_PRIVATE_API_KEY!,
+    api_keys: {
+      private_api_key: process.env.CANDYPAY_PRIVATE_API_KEY!,
+      public_api_key: process.env.CANDYPAY_PUBLIC_API_KEY!
+    },
     network: "mainnet",
     config: {
-      collect_shipping_address: true,
+      collect_shipping_address: false,
+      redirect_with_session_id: false
     },
   });
   ```
@@ -46,6 +51,7 @@ The `create` method creates and creates a new checkout session with the required
   - [`SAMO`](https://explorer.solana.com/address/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU)
   - [`DUST`](https://explorer.solana.com/address/DUSTcnwRpZjhds1tLY2NpcvVTmKL6JJERD9T274LcqCr)
   - [`SHDW`](https://explorer.solana.com/address/SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y)
+  - [`BONK`](https://explorer.solana.com/address/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263)
 
     ```ts
     const session = await sdk.session.create({
