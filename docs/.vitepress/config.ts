@@ -51,20 +51,6 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Getting Started",
-        collapsible: true,
-        items: [
-          {
-            text: "Introduction",
-            link: "/introduction.html",
-          },
-          {
-            text: "Terminology",
-            link: "/terminology.html",
-          },
-        ],
-      },
-      {
         text: "Checkout",
         collapsible: true,
         items: [
@@ -79,6 +65,23 @@ export default defineConfig({
           {
             text: "Quickstart",
             link: "/checkout/quickstart.html",
+          },
+          {
+            text: "REST API",
+            items: [
+              {
+                text: "Introduction",
+                link: "/checkout/api/introduction.html",
+              },
+              {
+                text: "Endpoints",
+                link: "/checkout/api/endpoints.html",
+              },
+              {
+                text: "Type Definitions",
+                link: "/checkout/api/types.html",
+              },
+            ],
           },
           {
             text: "Node SDK",
