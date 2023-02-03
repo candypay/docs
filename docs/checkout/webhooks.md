@@ -2,7 +2,8 @@
 
 CandyPay checkout allows developer to setup their own webhooks to listen events such as `transaction.successful`, `transaction.failed` and run post-checkout events such as saving the transaction details to a database.
 
-::: tip :zap: Full source code for the example webhook server available [here](https://github.com/candypay/checkout-webhook-example)
+::: tip 
+:zap: Full source code for the example webhook server available [here](https://github.com/candypay/checkout-webhook-example)
 :::
 
 ## Setting up an Node.js server
