@@ -67,6 +67,22 @@ export default defineConfig({
             link: "/checkout/quickstart.html",
           },
           {
+            text: "Node SDK",
+            link: "/checkout/node-sdk.html",
+          },
+          {
+            text: "React SDK",
+            link: "/checkout/react-sdk.html",
+          },
+          {
+            text: "Webhooks",
+            link: "/checkout/webhooks.html",
+          },
+          {
+            text: "Discounts",
+            link: "/checkout/discounts.html",
+          },
+          {
             text: "REST API",
             items: [
               {
@@ -82,22 +98,6 @@ export default defineConfig({
                 link: "/checkout/api/types.html",
               },
             ],
-          },
-          {
-            text: "Node SDK",
-            link: "/checkout/node-sdk.html",
-          },
-          {
-            text: "React SDK",
-            link: "/checkout/react-sdk.html",
-          },
-          {
-            text: "Webhooks",
-            link: "/checkout/webhooks.html",
-          },
-          {
-            text: "Discounts",
-            link: "/checkout/discounts.html",
           },
         ],
       },
