@@ -29,7 +29,6 @@ The entrypoint to the Node.js SDK is `CandyPay` instance that will give you acce
     network: "mainnet",
     config: {
       collect_shipping_address: false,
-      redirect_with_session_id: false,
     },
   });
   ```
@@ -53,23 +52,25 @@ The `create` method creates and creates a new checkout session with the required
   - [`SAMO`](https://explorer.solana.com/address/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU)
   - [`DUST`](https://explorer.solana.com/address/DUSTcnwRpZjhds1tLY2NpcvVTmKL6JJERD9T274LcqCr)
 
-  ```ts
-  const session = await candypay.session.create({
-    success_url: "https://your-website.com/checkout/success",
-    cancel_url: "https://your-website.com/checkout/cancel",
-    tokens: ["dust", "samo", "shdw"],
-    items: [
-      {
-        name: "Throwback Hip Bag",
-        price: 43.57, // value in USD
-        image: "https://imgur.com/EntGcVQ.png",
-        quantity: 1,
-        size: "M", // optional
-      },
-    ],
-    shipping_fees: 0.43, // optional | value in USD
-  });
-  ```
+It returns `session_id`, `order_id` and `redirect_url` for the corresponding checkout session.
+
+```ts
+const session = await candypay.session.create({
+  success_url: "https://your-website.com/checkout/success",
+  cancel_url: "https://your-website.com/checkout/cancel",
+  tokens: ["dust", "samo", "shdw"],
+  items: [
+    {
+      name: "Throwback Hip Bag",
+      price: 43.57, // value in USD
+      image: "https://imgur.com/EntGcVQ.png",
+      quantity: 1,
+      size: "M", // optional
+    },
+  ],
+  shipping_fees: 0.43, // optional | value in USD
+});
+```
 
 ### `metadata`
 
@@ -83,7 +84,7 @@ const metadata = await candypay.session.metadata({
 
 ### `generateRedirectURL`
 
-The `generateRedirectURL` method returns the encoded checkout URL. It takes in `session_id` as a parameter.
+The `generateRedirectURL` method returns the checkout URL. It takes in `session_id` as a parameter. The `generateRedirectURL` doesn't create a new checkout session rather it returns the URL via which the payment can be completed.
 
 ```ts
 const redirectURL = candypay.session.generateRedirectURL({
