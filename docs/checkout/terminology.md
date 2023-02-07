@@ -2,7 +2,7 @@
 
 ### Checkout session
 
-_placeholder_
+A pre-built and customizable payment page hosted by CandyPay, that can be used to accept one-time payments in Solana and SPL tokens, where everything settles in USDC stablecoin and supports a one-click checkout UX on mobile, tailored to increase conversations.
 
 ### Session ID
 
