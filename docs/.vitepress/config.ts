@@ -63,6 +63,10 @@ export default defineConfig({
             link: "/checkout/how-it-works.html",
           },
           {
+            text: "Terminology",
+            link: "/checkout/terminology.html",
+          },
+          {
             text: "Quickstart",
             link: "/checkout/quickstart.html",
           },
