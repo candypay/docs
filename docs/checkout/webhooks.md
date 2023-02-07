@@ -64,4 +64,4 @@ app.post("/webhook", async (req: Request, res: Response) => {
 });
 ```
 
-The `/webhook` endpoint validates the `X-CandyPay-Signature` header via the webhook secret (which is returned by the [`webhook.register()`](./node-sdk.md#register) method.
+The `/webhook` endpoint validates the `X-CandyPay-Signature` header via the webhook secret. The webhook secret can be generated from the dashboard.
