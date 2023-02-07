@@ -33,18 +33,18 @@ import { useCheckout } from "@candypay/react-checkout-sdk";
 ### To use the hook, call it like so:
 
 ```jsx
-const genSessionId = async () => {
+const generateSessionId = async () => {
   const response = await fetch("/api/session");
   const data = await response.json();
   return data.session_id;
 };
 };
 
-const { mutate, isLoading } = useCheckout(genSessionId)
+const { mutate, isLoading } = useCheckout(generateSessionId)
 
 ```
 
-In the above example, `genSessionId` is a function that returns a Promise that resolves to a session ID. Refer to the [API docs](https://docs.candypay.io/api-reference/checkout-api) for more information on how to generate a session ID.
+In the above example, `generateSessionId` is a function that returns a Promise that resolves to a session ID.
 
 ### Using the exported `mutate` function
 
