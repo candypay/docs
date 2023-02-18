@@ -13,7 +13,6 @@ The entrypoint to the Node.js SDK is `CandyPay` instance that will give you acce
 - `private_api_key` - The private API key which is been issued to the developer while generating an API key
 - `network` - The Solana cluster on which the payment checkout would take place i.e either `mainnet` or `devnet`
 - `collect_shipping_address` - A boolean to configure whether to show a shipping address form on the checkout page
-- `redirect_with_session_id` - A boolean to configure whether the `success_url` must include the session ID on redirect
 
   ```ts
   import { CandyPay } from "@candypay/checkout-sdk";

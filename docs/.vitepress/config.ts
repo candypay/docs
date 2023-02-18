@@ -38,6 +38,10 @@ export default defineConfig({
         text: "Get Started",
         link: "/checkout/introduction.html",
       },
+      {
+        text: "Dashboard",
+        link: "https://candypay.fun/",
+      },
     ],
 
     socialLinks: [

@@ -2,7 +2,10 @@
 
 A quickstart guide to integrate CandyPay Checkout into your application. In the following guide we're going to use Next.js as the frontend framework as it supports API routes by default.
 
-::: tip
+::: info API Keys
+:lock: API Keys would be needed to integrate Checkout, Generate yours [here](https://candypay.fun)
+:::
+::: tip Source Code
 :zap: Full source code for the demo app available [here](https://github.com/candypay/checkout-demo-example.git)
 :::
 
@@ -33,7 +36,7 @@ import { CandyPayProvider } from "@candypay/react-checkout-sdk";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CandyPayProvider publicApiKey={process.env.NEXT_PUBLIC_CP_API!}>
+    <CandyPayProvider publicApiKey={process.env.CANDYPAY_PUBLIC_API_KEY!}>
       <Component {...pageProps} />
     </CandyPayProvider>
   );
@@ -59,7 +62,6 @@ const sdk = new CandyPay({
   network: "mainnet", // use 'mainnet' for prod and 'devnet' for dev environment
   config: {
     collect_shipping_address: false,
-    redirect_with_session_id: false,
   },
 });
 ```
@@ -200,15 +202,15 @@ Your base app is ready to accept Solana Payments with Checkout SDK in mins! Make
 
 ## Next steps
 
-::: info
-🔥 [Webhooks](../checkout/webhooks.html)
+::: info [Webhooks](../checkout/webhooks.html)
+🔥 
 Set up webhooks to detect and fulfill new payments and run post-checkout events such as saving the transaction details to a database, sending custom emails, and others
 :::
-::: info
-🎉 [Discounts](../checkout/discounts.html)
+::: info [Discounts](../checkout/discounts.html)
+🎉 
 Reduce the amount charged to a customer by discounting their total due amount by a certain %, based on their NFT assets ownership
 :::
-::: info
-🎀 [Demo e-commerce app](https://github.com/candypay/checkout-ecom-example)
+::: info [Demo e-commerce app](https://github.com/candypay/checkout-ecom-example)
+🎀 
 Access this demo e-commerce website accepting Solana payments with Checkout SDK and refer it to create your own more complex applications accepting crypto payments
 :::
