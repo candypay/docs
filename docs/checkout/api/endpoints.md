@@ -7,7 +7,7 @@ The create checkout session API endpoint allows you to create a new checkout ses
 ### Endpoint
 
 ```bash
-POST https://api.candypay.fun/api/v1/session
+POST https://checkout-api.candypay.fun/api/v1/session
 ```
 
 ### Headers
@@ -40,7 +40,7 @@ The fetch checkout session metadata API endpoint allows you to retrieve the meta
 ### Endpoint
 
 ```bash
-GET https://api.candypay.fun/api/v1/session
+GET https://checkout-api.candypay.fun/api/v1/session
 ```
 
 ### Headers
