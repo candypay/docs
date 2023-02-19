@@ -32,9 +32,9 @@ All the following parameters must be passed in the request's payload/body.
 - `session_id` - An unique identifier for the checkout session
 - `order_id` - An unique identifier which can be used to track transactions in the dashboard
 
-## Create payment URL
+## Generate payment URL
 
-The create payment URL API endpoint allows you to create a payment page from an exisiting checkout session id, which users can visit and complete the payment 
+The generate payment URL API endpoint allows you to generate a payment URL from an exisiting checkout session ID, which users can visit and complete the payment 
 
 ### Endpoint
 

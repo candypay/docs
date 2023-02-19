@@ -17,32 +17,12 @@ Create a new Next.js application using `create-next-app`. You can remove the `--
 npx create-next-app checkout --ts
 ```
 
-Installing the required packages:
+Installing the required package:
 
 - `@candypay/checkout-sdk` - Node.js SDK for interacting with CandyPay Checkout's API
-- `@candypay/react-checkout-sdk` - SDK for simplifying the workflow of integrating CandyPay's Checkout with React.js
 
 ```bash
-npm install @candypay/checkout-sdk @candypay/react-checkout-sdk
-```
-
-## Wrapping the app with CandyPay provider
-
-The Next.js app need to be wrapped w/ the `CandyPayProvider` provider component to be able to use the React SDK. The `CandyPayProvider` takes in the public API key as a prop.
-
-```tsx
-import type { AppProps } from "next/app";
-import { CandyPayProvider } from "@candypay/react-checkout-sdk";
-
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <CandyPayProvider publicApiKey={process.env.CANDYPAY_PUBLIC_API_KEY!}>
-      <Component {...pageProps} />
-    </CandyPayProvider>
-  );
-}
-
-export default MyApp;
+npm install @candypay/checkout-sdk
 ```
 
 ## Creating a Next.js API route
@@ -156,24 +136,23 @@ const Cancel: NextPage = () => {
 export default Cancel;
 ```
 
-## Integrating the Checkout button
+## Integrating the Payment button
 
-The React SDK provides a helper component `CheckoutButton` which handles all the internal logic.
-
-Go ahead and open the `index.tsx` file under the `pages` folder. Import the `CheckoutButton` component and pass it in a function that generates a new session by calling the API route (/api/checkout) you have created in the previous step:
+Go ahead and open the `index.tsx` file under the `pages` folder. Create a new button and pass the function that generates a new session by calling the API route (/api/checkout) you have created in the previous step:
 
 ```tsx
 import type { NextPage } from "next";
-import { CheckoutButton } from "@candypay/react-checkout-sdk";
+import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
+  const router = useRouter()
   const createSession = async () => {
     const response = await fetch("/api/create-session", {
       method: "POST",
     });
     const data = await response.json();
 
-    return data.session_id;
+   router.push(data.payment_url);
   };
 
   return (
@@ -188,7 +167,7 @@ const Home: NextPage = () => {
     >
       <img src="https://imgur.com/M0l5SDh.png" alt="solana shades" />
       <p>Buy your Solana Shades</p>
-      <CheckoutButton handleSession={createSession}>Checkout</CheckoutButton>
+      <button onClick={createSession}>Checkout</button>
     </div>
   );
 };

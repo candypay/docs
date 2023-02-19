@@ -79,10 +79,6 @@ export default defineConfig({
             link: "/checkout/node-sdk.html",
           },
           {
-            text: "React SDK",
-            link: "/checkout/react-sdk.html",
-          },
-          {
             text: "Webhooks",
             link: "/checkout/webhooks.html",
           },
