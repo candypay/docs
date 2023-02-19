@@ -19,7 +19,6 @@ POST https://checkout-api.candypay.fun/api/v1/session
 All the following parameters must be passed in the request's payload/body.
 
 - `network` - It is either `mainnet` or devnet, specifying the network to use for the transaction
-- `amount` - The amount which must be paid by the end-user. Must be of type `number`
 - `success_url` - The URL to which the customer is redirected after the transaction is successful
 - `cancel_url` - The URL to which the customer is redirected after the transaction is canceled
 - `tokens` (Optional) - An array of optional tokens via which the customer can pay
@@ -32,6 +31,26 @@ All the following parameters must be passed in the request's payload/body.
 
 - `session_id` - An unique identifier for the checkout session
 - `order_id` - An unique identifier which can be used to track transactions in the dashboard
+
+## Create payment URL
+
+The create payment URL API endpoint allows you to create a payment page from an exisiting checkout session id, which users can visit and complete the payment 
+
+### Endpoint
+
+```bash
+GET https://checkout-api.candypay.fun/api/v1/session/payment_url
+```
+
+### Headers
+
+- `Authorization`: Public API key as a Bearer token
+
+### Request
+
+All the following parameters must be passed as query parameters.
+
+- `session_id` - The unique identifier of the checkout session
 
 ## Fetch checkout session metadata
 

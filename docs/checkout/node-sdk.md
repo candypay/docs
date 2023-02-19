@@ -51,7 +51,7 @@ The `create` method creates and creates a new checkout session with the required
   - [`SAMO`](https://explorer.solana.com/address/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU)
   - [`DUST`](https://explorer.solana.com/address/DUSTcnwRpZjhds1tLY2NpcvVTmKL6JJERD9T274LcqCr)
 
-It returns `session_id`, `order_id` and `redirect_url` for the corresponding checkout session.
+It returns `session_id`, `order_id` and `payment_url` for the corresponding checkout session.
 
 ```ts
 const session = await candypay.session.create({
@@ -81,12 +81,12 @@ const metadata = await candypay.session.metadata({
 });
 ```
 
-### `generateRedirectURL`
+### `generatePaymentURL`
 
-The `generateRedirectURL` method returns the checkout URL. It takes in `session_id` as a parameter. The `generateRedirectURL` doesn't create a new checkout session rather it returns the URL via which the payment can be completed.
+The `generatePaymentURL` method returns the checkout URL. It takes in `session_id` as a parameter. The `generatePaymentURL` doesn't create a new checkout session rather it returns the URL via which the payment can be completed.
 
 ```ts
-const redirectURL = candypay.session.generateRedirectURL({
+const paymentURL = candypay.session.generatePaymentURL({
   session_id,
 });
 ```
