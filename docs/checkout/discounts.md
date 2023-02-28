@@ -12,7 +12,7 @@ Discounts with crypto payments power great flexibility over fiat and can be used
 We need to first get the unique `Collection ID` of a particular NFT collection on Solana, for which you want to power ownership-based discount on checkout!  
 
 The process to find Collection ID is pretty straightforward,
-- Visit [hellomoon.io/collectionid](https://www.hellomoon.io/collectionid)
+- Visit [hellomoon.io/id](https://www.hellomoon.io/id)
 - Enter name of the NFT collection
 - Copy ID of the NFT collection you want to power discounts for
 
