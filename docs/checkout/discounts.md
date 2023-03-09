@@ -9,14 +9,17 @@ Discounts with crypto payments power great flexibility over fiat and can be used
 
 ## Finding the right Collection ID
 
-We need to first get the unique `Collection ID` of a particular NFT collection on Solana, for which you want to power ownership-based discount on checkout!  
+Whether ownership based discounts is being provided for a `CandyMachine Collection` or 1/1 `Master Edition NFTs`, we need to find the NFT's first verified creator address, which we call Collection ID in order to power this feature on checkout powered by [HelloMoon](https://www.hellomoon.io), a CandyPay partner!
 
-The process to find Collection ID is pretty straightforward,
-- Visit [hellomoon.io/id](https://www.hellomoon.io/id)
-- Enter name of the NFT collection
-- Copy ID of the NFT collection you want to power discounts for
+The process to find NFT's verified creator address is pretty straightforward,
+- Open the NFT address on [Solscan](https://solscan.io/) explorer
+- Visit the `Metadata` tab here
+- Under the Creators array, the first `address` with `verified` value as 1 is what we'll need to further power this feature. 
 
-![ Copy ID of the NFT collection](https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/Screenshot%202023-01-31%20011235.png)
+::: info :zap: Note, only use the creator address whose verified value is 1 
+:::
+
+![Creator Address with verified value as 1](https://i.ibb.co/s9x3jRq/pika-1672086667584-1x.png)
 
 
 ## Configure discounts while creating session
@@ -24,7 +27,7 @@ The process to find Collection ID is pretty straightforward,
 To add discounts in checkout, we need to configure the session module and pass the `discounts` object. The discounts object is passed uniquely on creation of each `session`, this gives merchants the flexibilty to power dynamic discounts, with dynamic data around the discount %, NFT collection to verify ownership for, etc.
 
 The params for `discounts` object are as follows,
-- `collection_id`: The unique ID of NFT collection
+- `collection_id`: The first creator address of the NFT, with verified value as 1
 - `discount`: Percentage of discount to be deducted from the total due amount, depicted in decimals. For a 20% discount, merchants need to pass 0.2, for a 75% discount 0.75 will be passed and respectively
 - `name`: Name of the NFT to show customers on the checkout page
 - `image`: Image of the NFT to show customers on the checkout page
@@ -45,7 +48,7 @@ The params for `discounts` object are as follows,
       ], 
        discounts: { // [!code focus]
           collection_id:// [!code focus]
-            "85bb7fdb666a3ac8a899dbd055a013b4", // [!code focus]
+            "B4x93Px5YYcQdpvEKmbPMWKGC5a8hytNqpitQFsEAjDx", // [!code focus]
           discount: 0.2,// [!code focus]
           name: "LILY NFT",// [!code focus]
           image:// [!code focus]
