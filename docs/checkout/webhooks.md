@@ -64,4 +64,27 @@ app.post("/webhook", async (req: Request, res: Response) => {
 });
 ```
 
-The `/webhook` endpoint validates the `X-CandyPay-Signature` header via the webhook secret field. The webhook secret can be generated from the CandyPay dashboard, under the [settings page](https://candypay.fun/settings)
+The `/webhook` endpoint validates the `X-CandyPay-Signature` header via the webhook secret field. The webhook secret needs to be generated from the CandyPay dashboard, under the [settings page](https://candypay.fun/settings)
+
+The `payload` objects provides you with all the payment related data that can be used to power multiple functions like NFT airdrops, SPL tokens cashback, storing payments in your custom dB, sending emails, and much more! A payload object includes all the below given fields,
+
+```
+{
+customer: '882BZWTWuJehEocq3wRq2dzzTe53n51C64rcWWVkDSpS',
+customer_email: 'customer@gm.com',
+event: 'transaction.successful',
+items: [{
+image: 'https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/61h5vYyRsjL._SL1212_.jpg';,
+name: 'Clayno Plushie',
+price: 0.03,
+quantity: 1
+}],
+network: 'mainnet',
+order_id: 'TyAhFD63RK8U',
+payment_amount: 0.03,
+payment_currency: 'USD',
+session_id: 'cp_pay_ef1bf155-7ae9-47e7-bbac-091e64fddeb9',
+signature: 'bzX81JoktbiKBkAqoVN1EAPFF9H6YfdcqeGez4d9SD9k8F2H62yF1gLaevtmED31b7XcCpWgRJhYMxhfQSFSThc',
+timestamp: '2023-04-11T18:02:08.644Z'
+}
+```
