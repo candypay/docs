@@ -43,7 +43,8 @@ The `session` module can be accessed via `candypay.session()` and provides the f
 The `create` method creates and creates a new checkout session with the required configuration. It takes in the following parameters and returns `session_id`:
 
 - `items` - An array of items which would be displayed on the checkout page. Each element of the `items` array is an object which would contain the `name`, `price`, `image`, `quantity` and `size` of the product
-- `shipping_fees` - An optional param which takes shipping fees (value in $USD) and add it on total cart value to charge users (we currently only support static value for shipping fees, please charge accordingly)
+- `shipping_fees` - An optional param that takes shipping fees (value in $USD) and add it on total cart value to charge users (we currently only support static value for shipping fees, please charge accordingly)
+- `metadata` - An optional param of type `object` that takes any data you would like to associate with your session and response it back in the get metadata and webhook routes. The value of this field is not shown on the payment page. 
 - `tokens` - An array of SPL tokens in which the customer could pay. By default, `SOL` and [`USDC`](https://explorer.solana.com/address/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v) ([`USDC-DEV`](https://explorer.solana.com/address/Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr?cluster=devnet) on devnet) would be shown to the customer on the checkout page. Currently the following SPL tokens are supported on mainnet:
 
   - [`BONK`](https://explorer.solana.com/address/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263)
@@ -68,6 +69,9 @@ const session = await candypay.session.create({
     },
   ],
   shipping_fees: 0.43, // optional | value in USD
+  metadata: { 
+      customer_name: "Jon Doe", 
+  },  // optional 
 });
 ```
 
