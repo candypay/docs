@@ -79,6 +79,9 @@ name: 'Clayno Plushie',
 price: 0.03,
 quantity: 1
 }],
+metadata: {
+customer_name: "John Doe"
+},
 network: 'mainnet',
 order_id: 'TyAhFD63RK8U',
 payment_amount: 0.03,
