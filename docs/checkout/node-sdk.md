@@ -45,6 +45,7 @@ The `create` method creates and creates a new checkout session with the required
 - `items` - An array of items which would be displayed on the checkout page. Each element of the `items` array is an object which would contain the `name`, `price`, `image`, `quantity` and `size` of the product
 - `shipping_fees` - An optional param that takes shipping fees (value in $USD) and add it on total cart value to charge users (we currently only support static value for shipping fees, please charge accordingly)
 - `metadata` - An optional param of type `object` that takes any data you would like to associate with your session and response it back in the get metadata and webhook routes. The value of this field is not shown on the payment page. 
+- `custom_data` - An optional object param that takes `name`, `image`, and `wallet_address` and replaces it with the original merchant data for that particular session. This field is tailored for marketplaces, and products supporting creators & users to sell on their platform allowing a white-label and instant settlement UX
 - `tokens` - An array of SPL tokens in which the customer could pay. By default, `SOL` and [`USDC`](https://explorer.solana.com/address/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v) ([`USDC-DEV`](https://explorer.solana.com/address/Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr?cluster=devnet) on devnet) would be shown to the customer on the checkout page. Currently the following SPL tokens are supported on mainnet:
 
   - [`BONK`](https://explorer.solana.com/address/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263)
@@ -72,6 +73,11 @@ const session = await candypay.session.create({
   metadata: { 
       customer_name: "Jon Doe", 
   },  // optional 
+  custom_data: {
+      name: "Aeyakovenko",
+      image: "https://i.ibb.co/chtf9qc/2691.png",
+      wallet_address: "86xCnPeV69n6t3DnyGvkKobf9FdN2H9oiVDdaMpo2MMY"
+  }, // optional
 });
 ```
 
