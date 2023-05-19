@@ -18,7 +18,7 @@ Available crypto payment infrastructure providers like Coinbase Commerce and Bit
 
 - Does not support Solana and SPL Tokens
 - Are hard to integrate, and manage and cause issues to scale
-- The UX to Pay is crappy, and unreliable from a customer perspective
+- The UX to pay is crappy, and unreliable from a customer perspective
 
 ### 3. No mobile support
 
@@ -54,7 +54,7 @@ Our Checkout solution is non-custodial forever, i.e **we don’t hold your funds
 
   Cryptocurrencies are volatile in nature and businesses need to secure their earnings from price fluctuations! To ensure this, we support "Swap Transactions", where end users can choose to pay from multiple supported SPL tokens (SAMO, DUST, GARI) and SOL itself, but merchants will only receive USDC (fully backed stablecoin) and can remain stress free from price fluctuations!
 
-![Swap TX](<https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/image%20(10).png>)
+![Swap transaction](<https://shdw-drive.genesysgo.net/BfBZRXtX2ad9dVyJnc6Tbww8egupegtiV2xiwWCBYH1h/image%20(10).png>)
 
 - **Mobile Native, Multi Pay methods with the best UX**
 

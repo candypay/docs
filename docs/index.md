@@ -29,5 +29,4 @@ features:
   - icon: 🎀
     title: NFT gated discounts
     details: Offer NFT based dynamic discounts and reward your community for NFT purchases at checkout
-
 ---

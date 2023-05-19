@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   lang: "en-US",
   title: "CandyPay",
-  description: "Seamless, mobile-native NFT & Payments experiences on Solana",
+  description: "The Payments layer for Solana",
 
   lastUpdated: true,
   cleanUrls: "without-subfolders",

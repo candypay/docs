@@ -49,12 +49,14 @@ const sdk = new CandyPay({
 Create a function called `handler` which would contain the logic for creating a checkout session. The `STATIC_URL` environment variable is the deployed URL of the Next.js application
 
 ```ts
-const handler = async (req, res) => {
+import type { NextApiHandler } from "next";
+
+const handler: NextApiHandler = async (req, res) => {
   try {
     const response = await sdk.session.create({
       success_url: `${process.env.STATIC_URL}/success`,
       cancel_url: `${process.env.STATIC_URL}/cancel`,
-      // additional tokens you can pass, SOL and USDC are default
+      // additional SPL tokens, SOL and USDC are the supported tokens by default
       tokens: ["dust", "samo"],
       items: [
         {
@@ -142,17 +144,17 @@ Go ahead and open the `index.tsx` file under the `pages` folder. Create a new bu
 
 ```tsx
 import type { NextPage } from "next";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-  const router = useRouter()
+  const router = useRouter();
   const createSession = async () => {
     const response = await fetch("/api/create-session", {
       method: "POST",
     });
     const data = await response.json();
 
-   router.push(data.payment_url);
+    router.push(data.payment_url);
   };
 
   return (
@@ -182,14 +184,14 @@ Your base app is ready to accept Solana Payments with Checkout SDK in mins! Make
 ## Next steps
 
 ::: info [Webhooks](../checkout/webhooks.html)
-🔥 
+🔥
 Set up webhooks to detect and fulfill new payments and run post-checkout events such as saving the transaction details to a database, sending custom emails, and others
 :::
 ::: info [Discounts](../checkout/discounts.html)
-🎉 
+🎉
 Reduce the amount charged to a customer by discounting their total due amount by a certain %, based on their NFT assets ownership
 :::
 ::: info [Demo e-commerce app](https://github.com/candypay/checkout-ecom-example)
-🎀 
+🎀
 Access this demo e-commerce website accepting Solana payments with Checkout SDK and refer it to create your own more complex applications accepting crypto payments
 :::
