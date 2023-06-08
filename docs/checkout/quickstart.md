@@ -6,7 +6,7 @@ A quickstart guide to integrate CandyPay Checkout into your application. In the 
 :lock: API Keys would be needed to integrate Checkout, Generate yours [here](https://candypay.fun)
 :::
 ::: tip Source Code
-:zap: Full source code for the demo app available [here](https://github.com/candypay/checkout-demo-example.git)
+:zap: Full source code for the demo app available [here](https://github.com/candypay-examples/starter-nextjs)
 :::
 
 ## Setting up the application
@@ -179,7 +179,7 @@ export default Home;
 
 ## Congratulations! :partying_face:
 
-Your base app is ready to accept Solana Payments with Checkout SDK in mins! Make sure to test your website and contact us at [Discord](https://discord.gg/VGjPXWUHGT) if you face any issues! Full source code available [here.](https://github.com/candypay/checkout-demo-example.git)
+Your base app is ready to accept Solana Payments with Checkout SDK in mins! Make sure to test your website and contact us at [Discord](https://discord.gg/VGjPXWUHGT) if you face any issues! Full source code available [here.](https://github.com/candypay-examples/starter-nextjs)
 
 ## Next steps
 
@@ -191,7 +191,7 @@ Set up webhooks to detect and fulfill new payments and run post-checkout events 
 🎉
 Reduce the amount charged to a customer by discounting their total due amount by a certain %, based on their NFT assets ownership
 :::
-::: info [Demo e-commerce app](https://github.com/candypay/checkout-ecom-example)
+::: info [Demo e-commerce app](https://github.com/candypay-examples/ecommerce-example)
 🎀
 Access this demo e-commerce website accepting Solana payments with Checkout SDK and refer it to create your own more complex applications accepting crypto payments
 :::
