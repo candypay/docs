@@ -105,6 +105,16 @@ export default defineConfig({
           },
         ],
       },
+        {
+        text: "Mobile SDK",
+        collapsible: true,
+        items: [
+          {
+            text: "Quickstart",
+            link: "/mobile-sdk/quickstart.html",
+          },
+        ],
+      },
       {
         text: "Guides",
         collapsible: true,
