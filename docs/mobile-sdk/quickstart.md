@@ -1,6 +1,6 @@
 # Getting started
 
-A quickstart guide to integrate CandyPay Mobile SDK into your React Native application. In the following guide we're going to use an Expo GO project.
+A quickstart guide to integrate CandyPay Mobile SDK into your mobile dApp. In the following guide we're going to use a Expo framework.
 
 ::: info API Keys
 :lock: API Keys would be needed to integrate Checkout, Generate yours [here](https://candypay.fun)
@@ -14,7 +14,7 @@ A quickstart guide to integrate CandyPay Mobile SDK into your React Native appli
 Create a new Expo project and install the following packages. If you're not sure how to create an Expo application, refer to the documentation - https://docs.expo.dev/tutorial/create-your-first-app
 
 - `@candypay/checkout-sdk` - Node.js SDK for interacting with CandyPay Checkout's API
-- `@candypay/elements-mobile-sdk` - React Native SDK for importing CandyPay's payment component
+- `@candypay/elements-mobile-sdk` - SDK for importing CandyPay's payment component into mobile dApps
 - `@solana-mobile/mobile-wallet-adapter-protocol` - Connecting our app with Solana compatible mobile wallets
 
 ```bash
