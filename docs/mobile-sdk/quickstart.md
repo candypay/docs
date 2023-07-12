@@ -9,6 +9,10 @@ A quickstart guide to integrate CandyPay Mobile SDK into your mobile dApp. In th
 :zap: Full source code for the demo app available [here](https://github.com/candypay-examples/mobile-sdk-example)
 :::
 
+## How it works
+
+![UI](https://res.cloudinary.com/dtzqgftjk/image/upload/v1689171272/Untitled_design_32_c8nfub.png)
+
 ## Installing the required package:
 
 Create a new Expo project and install the following packages. If you're not sure how to create an Expo application, refer to the documentation - https://docs.expo.dev/tutorial/create-your-first-app
@@ -140,4 +144,3 @@ Your base app is ready to accept Solana Payments on Mobile in mins! Make sure to
 🔥
 Read this detailed guide to dive deeper into how to utilize mobile SDK with different wallet connecting methods & props for Pay Component.
 :::
-
