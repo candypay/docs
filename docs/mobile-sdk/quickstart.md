@@ -17,7 +17,7 @@ Create a new Expo project and install the following packages. If you're not sure
 - `@candypay/elements-mobile-sdk` - SDK for importing CandyPay's payment component into mobile dApps
 - `@solana-mobile/mobile-wallet-adapter-protocol` - Connecting our app with Solana compatible mobile wallets
 - `@solana/web3.js` - SDK used for interacting with the Solana blockchain and sending on-chain transactions
-- `react-native-get-random-values` - This library works as a polyfill for the global crypto.getRandomValues
+- `react-native-get-random-values` - This library works as a polyfill for the global `crypto.getRandomValues`
 - `react-native-url-polyfill` - React Native does include a polyfill for URL, but this polyfill is homemade — in order to keep it lightweight
 
 ```bash
