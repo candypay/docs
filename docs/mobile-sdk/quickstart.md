@@ -11,7 +11,7 @@ A quickstart guide to integrate CandyPay Mobile SDK into your mobile dApp. In th
 
 ## How it works
 
-![UI](https://res.cloudinary.com/dtzqgftjk/image/upload/v1689171272/Untitled_design_32_c8nfub.png)
+![UI](https://i.ibb.co/qpFCbWp/Untitled-design-34.png)
 
 ## Installing the required package:
 
